@@ -15,7 +15,7 @@ The wearable features a Push-to-Talk (PTT) system that captures spoken language 
 Safety is paramount. The device continuously monitors the environment using an optimized Machine Learning model (Random Forest + MFCC). It is trained to identify high-priority danger signals—such as car horns, sirens, dog barks, and explosions. When a threat is detected, the device triggers an immediate haptic interrupt, vibrating the wearable and overriding the current display to show the alert type in Braille.
 
 ## Technical Features
-
+![alt text](SYSDIAGRAM.png)
 ### Technical Specifications
 Ammeter testing on prototype shows power draw of 80-120mW (Typical for microcontrollers)
 > For benchmark, an Apple Watch draws 70mW
