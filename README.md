@@ -1,4 +1,4 @@
-# Binary-Brialle
+# Binary-Braille
 
 ## Description
 > _Submission for the Beyond Binary competition by the Binary Babes_
@@ -19,16 +19,16 @@ Safety is paramount. The device continuously monitors the environment using an o
 Ammeter testing on prototype shows power draw of 80-120mW (Typical for microcontrollers)
 > For benchmark, an Apple Watch draws 70mW
 
-### Grade 1/2 Speech-to-Brialle Translation
-Audio data is passively polled and multiplexed between the push-to-talk and passive alert system. In push-to-talk mode, the audio data is processed into words and translated to Grade 1/2 brialle depending on the mode selection. The brialle is then sent into the FIFO buffer.
+### Grade 1/2 Speech-to-Braille Translation
+Audio data is passively polled and multiplexed between the push-to-talk and passive alert system. In push-to-talk mode, the audio data is processed into words and translated to Grade 1/2 Braille depending on the mode selection. The Braille is then sent into the FIFO buffer.
 
 ### Alert Passive Monitoring System
 In passive mode, audio data is continuously sampled through an optimized version of MFCC, and compared against a pre-trained ML dataset to detect and categorise dangerous sounds like car horns, dog barking and explosions.
 
-Upon detection of an alert signal, the wearable enters an interrupt routine and asserts a vibration motor while also displaying the sound heard in brialle.
+Upon detection of an alert signal, the wearable enters an interrupt routine and asserts a vibration motor while also displaying the sound heard in Braille.
 
 ### Input FIFO Buffer with Bypass
-The FIFO buffer stores push-to-talk brialles, with first-word-fall-through always pushing the first brialle code on the display. New brialle codes are written into the FIFO buffer, with read asserted whenever the user swipes on the screen (emulated by a DIP switch).
+The FIFO buffer stores push-to-talk Brailles, with first-word-fall-through always pushing the first Braille code on the display. New Braille codes are written into the FIFO buffer, with read asserted whenever the user swipes on the screen (emulated by a DIP switch).
 
 When an alert is sent, the FIFO is interrupted and the alert bypasses the FIFO, being pushed directly onto the display.
 
@@ -75,7 +75,7 @@ esptool.py --chip esp32 --port /dev/[PORT] --baud 460800 write_flash -z [.bin fi
 ### Sourcecode Installation
 1) Clone the current repository and download the Grade 2 braille translator from https://github.com/ant0nisk/pybrl
 ```bash
-git clone https://github.com/yeoshuyi/Binary-Brialle.git
+git clone https://github.com/yeoshuyi/Binary-Braille.git
 git clone https://github.com/ant0nisk/pybrl.git
 ```
 2) Clone files into the repository based on the directory:
