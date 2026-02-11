@@ -79,7 +79,7 @@ esptool.py --chip esp32 --port /dev/[PORT] --baud 460800 write_flash -z [.bin fi
 git clone https://github.com/yeoshuyi/Binary-Braille.git
 git clone https://github.com/ant0nisk/pybrl.git
 ```
-2) Clone files into the repository based on the directory:
+2) Copy files into the CIRCUITPYTHON directory based on the directory tree below:
 ```directory
 ├── code.py             #Main CircuitPython Code
 ├── brailleparse.py     #Handles Text-to-Braille
